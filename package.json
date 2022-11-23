@@ -1,0 +1,11 @@
+{
+  "name": "nice-review-trophy-nft",
+  "version": "1.0.0",
+  "description": "Troféus em NFTs para os melhores cursos do NiceReview de 2022",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
