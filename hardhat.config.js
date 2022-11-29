@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
+require("dotenv").config();
 
-const { ethers } = require("ethers/lib");
 const { task } = require("hardhat/config");
 
 const { deploy } = require('./tasks/deploy');
@@ -26,4 +26,10 @@ task('mint')
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
+  networks: {
+    goerli: {
+      url: process.env.ALCHEMY_NODE_URL_WITH_API_KEY,
+      accounts: [process.env.SIGNER_PRIVATE_KEY]
+    }
+  }
 };
