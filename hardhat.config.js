@@ -29,6 +29,10 @@ module.exports = {
   solidity: "0.8.17",
   networks: {
     goerli: {
+      url: process.env.GOERLI_ALCHEMY_NODE_URL_WITH_API_KEY,
+      accounts: [process.env.GOERLI_SIGNER_PRIVATE_KEY]
+    },
+    mainnet: {
       url: process.env.ALCHEMY_NODE_URL_WITH_API_KEY,
       accounts: [process.env.SIGNER_PRIVATE_KEY]
     }
