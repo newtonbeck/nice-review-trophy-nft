@@ -5,6 +5,13 @@
 - node 16
 - [hardhat](https://hardhat.org/hardhat-runner/docs/getting-started#installation)
 - An [Alchemy account](https://www.alchemy.com/)
+- A [Pinata account](https://www.pinata.cloud/)
+
+## Project structure
+
+- `contracts` folder contains the Solidity contract used to create the NFTs.
+- `tasks` contains the `deploy.js` and `mint.js` scripts used to deploy the contract and invoke the contract's `safeMint` method during the NFT creation.
+- `static` contains the `images` and `json_metadata` used to create the NFTs
 
 ## Running the project
 
@@ -57,6 +64,8 @@ The address `0x5FbDB2315678afecb367f032d93F642f64180aa3` represents the contract
 #### Step 4
 
 Finally, create the NFT running the command below. Provide one of the test account's addresses to the `--to-address` argument (from the first step). Use `QmTNi2TeeDkL1r3JPVNWnJAGxUFuQUFVmGpWPE2T5G4Tz3` as `--ipfs-cid` argument for now.
+
+> You can use [Pinata](https://www.pinata.cloud/) to deploy your own image and JSON metadata, and then use your own IPFS CID here
 
 ```shell
 npx hardhat mint \
